@@ -1,0 +1,26 @@
+<h1 mat-dialog-title>Post N: {{data.id}}</h1>
+<div mat-dialog-content>
+
+    <div *ngIf="data.fileType=='image/png' ">
+        <h1>{{data.content}}</h1>
+        <img src="{{'http://localhost:4200/assets/'+ data.fileName}}" alt="" style="width:100%">
+    </div>
+
+    <div *ngIf="data.fileType=='video/mp4' ||data.fileType=='audio/mpeg' ">
+        <!--         <p>{{data.content}}</p>
+ -->
+        <video controls autoplay id="video1" poster="" preload autoplay loop muted style="width:100%">
+
+            <script>
+                document.getElementById('video1').play(); 
+            </script>
+
+            <br><br>
+            <source src="{{'http://localhost:4200/assets/'+ data.fileName}}">
+        </video>
+    </div>
+
+</div>
+<div mat-dialog-actions style="padding-left: 45%;text-align: center ;">
+    <button mat-button (click)="onNoClick()">Close</button>
+</div>

@@ -1,0 +1,27 @@
+.example-button-row {
+  display: table-cell;
+  width: 490px;
+}
+
+.example-button-row .mat-button-base {
+  margin: 8px 8px 8px 0;
+}
+
+
+td.mat-cell {
+  padding: 16px 0;
+  border-bottom: 1px solid #ffa600;
+  border-top: 1px solid #ffa600;
+}
+
+td.mat-cell:first-child {
+  border-left: 1px solid #ffa600;
+}
+
+td.mat-cell:last-child {
+  border-right: 1px solid #ffa600;
+}
+
+table {
+  border-spacing: 0 8px !important;
+}
